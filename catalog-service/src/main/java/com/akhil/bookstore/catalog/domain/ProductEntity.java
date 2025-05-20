@@ -1,0 +1,96 @@
+package com.akhil.bookstore.catalog.domain;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+
+import java.math.BigDecimal;
+
+@Entity
+@Table(name = "products")
+class ProductEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "product_id_generator")
+    @SequenceGenerator(name = "product_id_generator", sequenceName = "product_id_sequence")
+    private Long id;
+
+    @Column(nullable = false, unique = true)
+    @NotEmpty(message = "Product code is required")
+    private String code;
+
+    @Column(nullable = false, unique = true)
+    @NotEmpty(message = "Product name is required")
+    private String name;
+
+    @NotNull(message = "Product price is required")
+    @Column(nullable = false)
+    @DecimalMin("0.1")
+    private BigDecimal price;
+
+    private String description;
+
+    private String imageUrl;
+
+    public ProductEntity(Long id, String code, String name, BigDecimal price, String description, String imageUrl) {
+        this.id = id;
+        this.code = code;
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.imageUrl = imageUrl;
+    }
+
+    public ProductEntity() {
+
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+}
