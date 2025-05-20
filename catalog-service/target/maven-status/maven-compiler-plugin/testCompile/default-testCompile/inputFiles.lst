@@ -1,0 +1,6 @@
+/Users/cvmakhilchundru/Workspaces/IntelliJ/Springboot/spring-boot-microservice/catalog-service/src/test/java/com/akhil/bookstore/catalog/AbstractIT.java
+/Users/cvmakhilchundru/Workspaces/IntelliJ/Springboot/spring-boot-microservice/catalog-service/src/test/java/com/akhil/bookstore/catalog/CatalogServiceApplicationTests.java
+/Users/cvmakhilchundru/Workspaces/IntelliJ/Springboot/spring-boot-microservice/catalog-service/src/test/java/com/akhil/bookstore/catalog/TestCatalogServiceApplication.java
+/Users/cvmakhilchundru/Workspaces/IntelliJ/Springboot/spring-boot-microservice/catalog-service/src/test/java/com/akhil/bookstore/catalog/TestcontainersConfiguration.java
+/Users/cvmakhilchundru/Workspaces/IntelliJ/Springboot/spring-boot-microservice/catalog-service/src/test/java/com/akhil/bookstore/catalog/domain/ProductRepositoryTest.java
+/Users/cvmakhilchundru/Workspaces/IntelliJ/Springboot/spring-boot-microservice/catalog-service/src/test/java/com/akhil/bookstore/catalog/web/controllers/ProductControllerTest.java
